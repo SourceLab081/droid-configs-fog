@@ -1,10 +1,10 @@
 # Feel free to disable non-critical HA parts during devel by commenting lines out
 # Generated in hadk by executing: rpm/dhd/helpers/add_new_device.sh
 
-%package -n patterns-sailfish-device-configuration-miatoll
-Summary: Jolla Configuration miatoll
-Requires: patterns-sailfish-device-configuration-common-miatoll
-Requires: patterns-sailfish-device-adaptation-miatoll
+%package -n patterns-sailfish-device-configuration-fog
+Summary: Jolla Configuration fog
+Requires: patterns-sailfish-device-configuration-common-fog
+Requires: patterns-sailfish-device-adaptation-fog
 
 # For devices with cellular modem. Those without one, please comment out:
 Requires: patterns-sailfish-cellular-apps
@@ -57,7 +57,7 @@ Requires: geoclue-provider-mlsdb
 # to improve camera startup times and the like
 Requires: mapplauncherd-booster-silica-qt5-media
 
-%description -n patterns-sailfish-device-configuration-miatoll
-Pattern with packages for miatoll configurations
+%description -n patterns-sailfish-device-configuration-fog
+Pattern with packages for fog configurations
 
-%files -n patterns-sailfish-device-configuration-miatoll
+%files -n patterns-sailfish-device-configuration-fog

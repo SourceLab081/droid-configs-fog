@@ -1,7 +1,7 @@
-# DisplayName: Jolla miatoll/@ARCH@ (release) 1
+# DisplayName: Jolla fog/@ARCH@ (release) 1
 # KickstartType: release
-# DeviceModel: miatoll
-# DeviceVariant: miatoll
+# DeviceModel: fog
+# DeviceVariant: fog
 # Brand: Jolla
 # SuggestedImageType: fs
 # SuggestedArchitecture: aarch64
@@ -13,8 +13,8 @@ part / --size 500 --ondisk sda --fstype=ext4
 
 ## No suitable configuration found in /tmp/sandbox/usr/share/ssu/kickstart/bootloader
 
-repo --name=adaptation-common-miatoll-@RELEASE@ --baseurl=https://releases.jolla.com/releases/@RELEASE@/jolla-hw/adaptation-common/@ARCH@/
-repo --name=adaptation0-miatoll-@RELEASE@ --baseurl=https://sf.devpins.org/@RELEASE@/xiaomi-miatoll/@ARCH@
+repo --name=adaptation-common-fog-@RELEASE@ --baseurl=https://releases.jolla.com/releases/@RELEASE@/jolla-hw/adaptation-common/@ARCH@/
+repo --name=adaptation0-fog-@RELEASE@ --baseurl=https://sf.devpins.org/@RELEASE@/xiaomi-fog/@ARCH@
 repo --name=apps-@RELEASE@ --baseurl=https://releases.jolla.com/jolla-apps/@RELEASE@/@ARCH@/
 repo --name=customer-jolla-@RELEASE@ --baseurl=https://releases.jolla.com/features/@RELEASE@/customers/jolla/@ARCH@/
 repo --name=harbour-storeman-obs-@RELEASE@ --baseurl=https://repo.sailfishos.org/obs/home:/olf:/harbour-storeman/5.0_@ARCH@
@@ -23,11 +23,11 @@ repo --name=jolla-@RELEASE@ --baseurl=https://releases.jolla.com/releases/@RELEA
 repo --name=sailfishos-chum-@RELEASE@ --baseurl=https://repo.sailfishos.org/obs/sailfishos:/chum/@RELEASE@_@ARCH@
 
 %packages
-patterns-sailfish-device-configuration-miatoll
+patterns-sailfish-device-configuration-fog
 %end
 
 %attachment
-### Commands from /tmp/sandbox/usr/share/ssu/kickstart/attachment/miatoll
+### Commands from /tmp/sandbox/usr/share/ssu/kickstart/attachment/fog
 /boot/hybris-boot.img
 /boot/hybris-updater-script
 /boot/hybris-updater-unpack.sh
@@ -144,7 +144,7 @@ export SSU_RELEASE_TYPE=release
 ### begin hybris
 pushd $IMG_OUT_DIR # ./sfe-$DEVICE-$RELEASE_ID
 
-DEVICE=miatoll
+DEVICE=fog
 EXTRA_NAME=@EXTRA_NAME@
 DATE=$(date +"%Y%m%d") # 20191101
 

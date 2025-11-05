@@ -1,1 +1,9 @@
+CPUCHECK_STRING="Qualcomm Technologies, Inc Fog-AB"
 
+PART_11="boot"
+PART_17="dtbo"
+
+PART_REAL_11="sde11"
+PART_REAL_17="sde17"
+
+PART_I="11 17"

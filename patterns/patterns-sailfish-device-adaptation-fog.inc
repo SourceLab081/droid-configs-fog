@@ -1,21 +1,21 @@
 # Feel free to disable non-critical HA parts during devel by commenting lines out
 # Generated in hadk by executing: rpm/dhd/helpers/add_new_device.sh
 
-%package -n patterns-sailfish-device-adaptation-miatoll
-Summary: Jolla HW Adaptation miatoll
-Requires: droid-hal-miatoll
-Requires: droid-hal-miatoll-img-boot
-Requires: droid-hal-miatoll-kernel
-Requires: droid-hal-miatoll-kernel-dtbo
-Requires: droid-hal-miatoll-kernel-modules
-Requires: droid-config-miatoll-sailfish
-Requires: droid-config-miatoll-pulseaudio-settings
-Requires: droid-config-miatoll-policy-settings
-Requires: droid-config-miatoll-preinit-plugin
-Requires: droid-config-miatoll-flashing
-Requires: droid-config-miatoll-bluez5
-Requires: droid-hal-version-miatoll
-Requires: droid-hal-miatoll-detritus
+%package -n patterns-sailfish-device-adaptation-fog
+Summary: Jolla HW Adaptation fog
+Requires: droid-hal-fog
+Requires: droid-hal-fog-img-boot
+Requires: droid-hal-fog-kernel
+Requires: droid-hal-fog-kernel-dtbo
+Requires: droid-hal-fog-kernel-modules
+Requires: droid-config-fog-sailfish
+Requires: droid-config-fog-pulseaudio-settings
+Requires: droid-config-fog-policy-settings
+Requires: droid-config-fog-preinit-plugin
+Requires: droid-config-fog-flashing
+Requires: droid-config-fog-bluez5
+Requires: droid-hal-version-fog
+Requires: droid-hal-fog-detritus
 
 # Hybris packages
 Requires: libhybris-libEGL
@@ -106,7 +106,7 @@ Requires: usb-moded-connection-sharing-android-connman-config
 # wait_hwcomposer script
 # Requires: libgbinder-tools
 
-%description -n patterns-sailfish-device-adaptation-miatoll
-Pattern with packages for miatoll HW Adaptation
+%description -n patterns-sailfish-device-adaptation-fog
+Pattern with packages for fog HW Adaptation
 
-%files -n patterns-sailfish-device-adaptation-miatoll
+%files -n patterns-sailfish-device-adaptation-fog

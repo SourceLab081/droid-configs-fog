@@ -99,6 +99,9 @@ Requires: geoclue-provider-hybris
 # NFC support
 Requires: nfcd-binder-plugin
 
+# For mount partitions
+Requires: parse-android-dynparts
+
 # Usb-Tethering
 Requires: usb-moded-defaults-android
 Requires: usb-moded-connection-sharing-android-connman-config

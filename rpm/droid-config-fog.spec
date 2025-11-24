@@ -28,6 +28,7 @@
 # Device-specific ofono configuration
 Provides: ofono-configs
 Obsoletes: ofono-configs-mer
+Obsoletes: ofono-configs-binder
 
 Provides: usb-moded-configs
 

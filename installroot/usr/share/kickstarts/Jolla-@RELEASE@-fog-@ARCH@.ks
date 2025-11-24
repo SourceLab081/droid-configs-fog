@@ -14,7 +14,7 @@ part / --size 500 --ondisk sda --fstype=ext4
 ## No suitable configuration found in /tmp/sandbox/usr/share/ssu/kickstart/bootloader
 
 repo --name=adaptation-common-fog-@RELEASE@ --baseurl=https://releases.jolla.com/releases/@RELEASE@/jolla-hw/adaptation-common/@ARCH@/
-repo --name=adaptation0-fog-@RELEASE@ --baseurl=https://sf.devpins.org/@RELEASE@/xiaomi-fog/@ARCH@
+repo --name=adaptation0-fog-@RELEASE@ --baseurl=https://SourceLab081.github.io/repo/@RELEASE@/xiaomi-fog/@ARCH@/
 repo --name=apps-@RELEASE@ --baseurl=https://releases.jolla.com/jolla-apps/@RELEASE@/@ARCH@/
 repo --name=customer-jolla-@RELEASE@ --baseurl=https://releases.jolla.com/features/@RELEASE@/customers/jolla/@ARCH@/
 repo --name=harbour-storeman-obs-@RELEASE@ --baseurl=https://repo.sailfishos.org/obs/home:/olf:/harbour-storeman/5.0_@ARCH@

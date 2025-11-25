@@ -36,8 +36,8 @@ Obsoletes: jolla-devicelock-daemon-encpartition
 # Telephony
 Requires: ofono-binder-plugin
 Requires: dummy_netd
-Requires: modem_auto_config
-Requires: ofono-vendor-qti-radio-plugin
+# Requires: modem_auto_config
+# Requires: ofono-vendor-qti-radio-plugin
 
 # For torch
 Requires: jolla-settings-system-flashlight

@@ -28,10 +28,10 @@ Requires: libhybris-libvibrator
 Requires: bluebinder
 
 # Fingerprint
-Requires: sailfish-devicelock-fpd
-Requires: sailfish-fpd-community
-Requires: droid-biometry-fp
-Obsoletes: jolla-devicelock-daemon-encpartition
+# Requires: sailfish-devicelock-fpd
+# Requires: sailfish-fpd-community
+# Requires: droid-biometry-fp
+# Obsoletes: jolla-devicelock-daemon-encpartition
 
 # Telephony
 Requires: ofono-binder-plugin

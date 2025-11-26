@@ -1,9 +1,9 @@
 # These and other macros are documented in
 # ../droid-configs-device/droid-configs.inc
-%define device psyche
+%define device fog
 %define vendor xiaomi
 %define vendor_pretty Xiaomi
-%define device_pretty Xiaomi 12X
+%define device_pretty Redmi 10C
 %define dcd_path ./
 # Adjust this for your device
 %define pixel_ratio 1.5
@@ -38,5 +38,5 @@ Obsoletes: bluez5-configs-mer
 %define ofono_disable_plugins bluez4,dun_gw_bluez4,hfp_ag_bluez4,hfp_bluez4,dun_gw_bluez5,hfp_bluez5
 
 %include droid-configs-device/droid-configs.inc
-%include patterns/patterns-sailfish-device-adaptation-psyche.inc
-%include patterns/patterns-sailfish-device-configuration-psyche.inc
+%include patterns/patterns-sailfish-device-adaptation-fog.inc
+%include patterns/patterns-sailfish-device-configuration-fog.inc

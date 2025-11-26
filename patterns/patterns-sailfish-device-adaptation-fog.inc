@@ -1,21 +1,21 @@
 # Feel free to disable non-critical HA parts during devel by commenting lines out
 # Generated in hadk by executing: rpm/dhd/helpers/add_new_device.sh
 
-%package -n patterns-sailfish-device-adaptation-psyche
-Summary: Jolla HW Adaptation psyche
-Requires: droid-hal-psyche
-Requires: droid-hal-psyche-img-boot
-Requires: droid-hal-psyche-kernel-dtbo
-Requires: droid-hal-psyche-vendor_boot
-Requires: droid-hal-psyche-kernel-modules
-Requires: droid-config-psyche-sailfish
-Requires: droid-config-psyche-pulseaudio-settings
-Requires: droid-config-psyche-policy-settings
-Requires: droid-config-psyche-preinit-plugin
-Requires: droid-config-psyche-flashing
-Requires: droid-config-psyche-bluez5
-Requires: droid-system-psyche
-Requires: droid-hal-version-psyche
+%package -n patterns-sailfish-device-adaptation-fog
+Summary: Jolla HW Adaptation fog
+Requires: droid-hal-fog
+Requires: droid-hal-fog-img-boot
+Requires: droid-hal-fog-kernel-dtbo
+Requires: droid-hal-fog-vendor_boot
+Requires: droid-hal-fog-kernel-modules
+Requires: droid-config-fog-sailfish
+Requires: droid-config-fog-pulseaudio-settings
+Requires: droid-config-fog-policy-settings
+Requires: droid-config-fog-preinit-plugin
+Requires: droid-config-fog-flashing
+Requires: droid-config-fog-bluez5
+Requires: droid-system-fog
+Requires: droid-hal-version-fog
 
 # Hybris packages
 Requires: libhybris-libEGL
@@ -93,7 +93,7 @@ Requires: jolla-settings-system-flashlight
 # For suspend to work with enabled Wi-Fi on newer Qualcomm devices
 Requires: sailfish-connman-plugin-suspend
 
-%description -n patterns-sailfish-device-adaptation-psyche
-Pattern with packages for psyche HW Adaptation
+%description -n patterns-sailfish-device-adaptation-fog
+Pattern with packages for fog HW Adaptation
 
-%files -n patterns-sailfish-device-adaptation-psyche
+%files -n patterns-sailfish-device-adaptation-fog

@@ -1,10 +1,10 @@
 # Feel free to disable non-critical HA parts during devel by commenting lines out
 # Generated in hadk by executing: rpm/dhd/helpers/add_new_device.sh
 
-%package -n patterns-sailfish-device-configuration-psyche
-Summary: Jolla Configuration psyche
-Requires: patterns-sailfish-device-configuration-common-psyche
-Requires: patterns-sailfish-device-adaptation-psyche
+%package -n patterns-sailfish-device-configuration-fog
+Summary: Jolla Configuration fog
+Requires: patterns-sailfish-device-configuration-common-fog
+Requires: patterns-sailfish-device-adaptation-fog
 
 # For devices with cellular modem. Those without one, please comment out:
 Requires: patterns-sailfish-cellular-apps
@@ -50,7 +50,7 @@ Requires: sailfish-utilities
 Requires: sailfish-audiorecorder
 Requires: jolla-settings-networking-plugin-vpn-openfortivpn
 
-%description -n patterns-sailfish-device-configuration-psyche
-Pattern with packages for psyche configurations
+%description -n patterns-sailfish-device-configuration-fog
+Pattern with packages for fog configurations
 
-%files -n patterns-sailfish-device-configuration-psyche
+%files -n patterns-sailfish-device-configuration-fog

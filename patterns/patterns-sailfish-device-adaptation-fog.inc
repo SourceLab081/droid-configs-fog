@@ -14,7 +14,6 @@ Requires: droid-config-fog-policy-settings
 Requires: droid-config-fog-preinit-plugin
 Requires: droid-config-fog-flashing
 Requires: droid-config-fog-bluez5
-Requires: droid-system-fog
 Requires: droid-hal-version-fog
 
 # Hybris packages

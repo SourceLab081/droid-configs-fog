@@ -1,3 +1,1 @@
-load-module module-udev-detect
-
-load-module module-droid-card rate=48000 sink_format=s24le
+load-module module-droid-card rate=48000 hw_volume=false

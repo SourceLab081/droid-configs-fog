@@ -1,4 +1,4 @@
-%define device pipa
+%define device fog
 %define vendor xiaomi
 
 %define vendor_pretty Xiaomi
@@ -25,5 +25,5 @@ Obsoletes: usb-moded-defaults
 Requires: libgbinder-tools
 
 %include droid-configs-device/droid-configs.inc
-%include patterns/patterns-sailfish-device-adaptation-pipa.inc
-%include patterns/patterns-sailfish-device-configuration-pipa.inc
+%include patterns/patterns-sailfish-device-adaptation-fog.inc
+%include patterns/patterns-sailfish-device-configuration-fog.inc

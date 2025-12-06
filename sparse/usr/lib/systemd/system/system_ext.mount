@@ -3,10 +3,12 @@ Description=Droid mount for /system_ext
 Before=local-fs.target systemd-modules-load.service
 
 [Mount]
-What=/dev/mapper/dynpart-system_ext_a
+What=/system_root/system_ext
 Where=/system_ext
-Type=ext4
-Options=ro,barrier=1
+Type=none
+#ext4
+Options=bind,ro
+#,barrier=1
 # Options had SELinux context option:  
 
 # Default is 90 which makes mount period too long in case of

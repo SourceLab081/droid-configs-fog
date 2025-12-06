@@ -1,6 +1,6 @@
 pushd $IMG_OUT_DIR
 
-DEVICE=pipa
+DEVICE=fog
 
 VERSION_FILE=./os-release
 source $VERSION_FILE

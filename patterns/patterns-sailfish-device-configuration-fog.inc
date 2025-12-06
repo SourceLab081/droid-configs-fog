@@ -1,10 +1,10 @@
 # Feel free to disable non-critical HA parts during devel by commenting lines out
 # Generated in hadk by executing: rpm/dhd/helpers/add_new_device.sh
 
-%package -n patterns-sailfish-device-configuration-pipa
-Summary: Jolla Configuration pipa
-Requires: patterns-sailfish-device-configuration-common-pipa
-Requires: patterns-sailfish-device-adaptation-pipa
+%package -n patterns-sailfish-device-configuration-fog
+Summary: Jolla Configuration fog
+Requires: patterns-sailfish-device-configuration-common-fog
+Requires: patterns-sailfish-device-adaptation-fog
 
 # Early stages of porting benefit from these:
 Requires: patterns-sailfish-device-tools
@@ -27,7 +27,7 @@ Requires: patterns-sailfish-consumer-generic
 Requires: mapplauncherd-booster-silica-qt5-media
 
 # Audio rotation fix
-Requires: pipa-audio-rotation
+# Requires: fog-audio-rotation
 
 # bloat
 Recommends: harbour-storeman
@@ -35,7 +35,7 @@ Recommends: sailfishos-chum-gui
 Recommends: punky
 Recommends: verdandiupdater-sfos
 
-%description -n patterns-sailfish-device-configuration-pipa
-Pattern with packages for pipa configurations
+%description -n patterns-sailfish-device-configuration-fog
+Pattern with packages for fog configurations
 
-%files -n patterns-sailfish-device-configuration-pipa
+%files -n patterns-sailfish-device-configuration-fog

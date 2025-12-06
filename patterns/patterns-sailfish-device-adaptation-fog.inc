@@ -1,20 +1,20 @@
 # Feel free to disable non-critical HA parts during devel by commenting lines out
 # Generated in hadk by executing: rpm/dhd/helpers/add_new_device.sh
 
-%package -n patterns-sailfish-device-adaptation-pipa
-Summary: Jolla HW Adaptation pipa
-Requires: droid-hal-pipa
-Requires: droid-hal-pipa-img-boot
-Requires: droid-hal-pipa-kernel-modules
-Requires: droid-hal-pipa-kernel-dtbo
-Requires: droid-hal-pipa-vendor_boot
-Requires: droid-config-pipa-sailfish
-Requires: droid-config-pipa-pulseaudio-settings
-Requires: droid-config-pipa-policy-settings
-Requires: droid-config-pipa-preinit-plugin
-Requires: droid-config-pipa-flashing
-Requires: droid-config-pipa-bluez5
-Requires: droid-hal-version-pipa
+%package -n patterns-sailfish-device-adaptation-fog
+Summary: Jolla HW Adaptation fog
+Requires: droid-hal-fog
+Requires: droid-hal-fog-img-boot
+Requires: droid-hal-fog-kernel-modules
+Requires: droid-hal-fog-kernel-dtbo
+Requires: droid-hal-fog-vendor_boot
+Requires: droid-config-fog-sailfish
+Requires: droid-config-fog-pulseaudio-settings
+Requires: droid-config-fog-policy-settings
+Requires: droid-config-fog-preinit-plugin
+Requires: droid-config-fog-flashing
+Requires: droid-config-fog-bluez5
+Requires: droid-hal-version-fog
 
 # Hybris packages
 Requires: libhybris-libEGL
@@ -66,7 +66,7 @@ Requires: rfkill
 # enable device lock and allow to select untrusted software
 Requires: jolla-devicelock-daemon-encsfa
 
-%description -n patterns-sailfish-device-adaptation-pipa
-Pattern with packages for pipa HW Adaptation
+%description -n patterns-sailfish-device-adaptation-fog
+Pattern with packages for fog HW Adaptation
 
-%files -n patterns-sailfish-device-adaptation-pipa
+%files -n patterns-sailfish-device-adaptation-fog

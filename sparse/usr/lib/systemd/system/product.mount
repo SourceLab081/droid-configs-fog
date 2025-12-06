@@ -3,10 +3,12 @@ Description=Droid mount for /product
 Before=local-fs.target systemd-modules-load.service
 
 [Mount]
-What=/dev/mapper/dynpart-product_a
+What=/system_root/product
 Where=/product
-Type=ext4
-Options=ro,barrier=1,discard
+Type=none
+#Type=ext4
+Options=bind,ro
+#,barrier=1,discard
 # Options had SELinux context option:  
 
 # Default is 90 which makes mount period too long in case of

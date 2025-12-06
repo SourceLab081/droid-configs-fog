@@ -34,6 +34,10 @@ Requires: dummy_netd
 # Sensors
 Requires: hybris-libsensorfw-qt5
 
+# Vibra
+Requires: ngfd-plugin-native-vibrator
+Requires: libngf-qt5-qtfeedback
+
 # Needed for /dev/touchscreen symlink
 Requires: qt5-plugin-generic-evdev
 
@@ -44,6 +48,11 @@ Requires: pulseaudio-modules-droid-hidl
 # audiosystem-passthrough in qti mode (e.g. >=Android 9 Qualcomm),
 # to fix non-responding Camera app and/or voice during a phone call:
 Requires: audiosystem-passthrough-dummy-af
+
+# droid-bthelper monitors bluetooth headsets and notifies android
+# audio service. after such notification, phone calls are routed through
+# bluetooth headset
+Requires: droid-bthelper
 
 # for audio recording to work:
 Requires: qt5-qtmultimedia-plugin-mediaservice-gstmediacapture
@@ -64,9 +73,26 @@ Requires: usb-moded
 Requires: rfkill
 
 # enable device lock and allow to select untrusted software
-Requires: jolla-devicelock-daemon-encsfa
+Requires: sailfish-devicelock-fpd
+Requires: sailfish-fpd-community
+Requires: sailfish-fpd-community-test
+Requires: droid-fake-crypt
+Obsoletes: jolla-devicelock-daemon-encsfa
+
+# enable device lock and allow to select untrusted software
+#Requires: jolla-devicelock-daemon-encsfa
+
+# For GPS
+Requires: geoclue-provider-hybris
 
 %description -n patterns-sailfish-device-adaptation-fog
 Pattern with packages for fog HW Adaptation
+
+# For suspend to work with enabled Wi-Fi on newer Qualcomm devices
+Requires: sailfish-connman-plugin-suspend
+
+# Splash screen - it has to be stopped for composer to work, but somehow
+# it is required for high boot success rate
+Requires: yamuisplash
 
 %files -n patterns-sailfish-device-adaptation-fog

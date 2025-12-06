@@ -22,6 +22,9 @@ Requires: jolla-settings-accounts-extensions-3rd-party-all
 # Required for Jolla Store Access
 Requires: patterns-sailfish-consumer-generic
 
+# For Mozilla location services (online)
+Requires: geoclue-provider-mlsdb
+
 # Devices with 2G or more memory should also include this booster
 # to improve camera startup times and the like
 Requires: mapplauncherd-booster-silica-qt5-media

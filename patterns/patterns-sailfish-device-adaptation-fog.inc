@@ -16,6 +16,7 @@ Requires: droid-config-fog-flashing
 Requires: droid-config-fog-bluez5
 Requires: droid-hal-version-fog
 
+
 # Hybris packages
 Requires: libhybris-libEGL
 Requires: libhybris-libGLESv2
@@ -91,6 +92,17 @@ Requires: sailfish-device-encryption-community-droid
 
 # For GPS
 Requires: geoclue-provider-hybris
+
+# For FM radio on some QCOM devices
+Requires: qt5-qtmultimedia-plugin-mediaservice-irisradio
+Requires: jolla-mediaplayer-radio
+
+# NFC support
+# 1. binder plugin requires Android 8 or a newer base
+# 2. pn54x plugin talks directly to pn54x driver
+# These plugins are mutually exclusive, you need to pick one:
+Requires: nfcd-binder-plugin
+#Requires: nfcd-pn54x-plugin
 
 %description -n patterns-sailfish-device-adaptation-fog
 Pattern with packages for fog HW Adaptation

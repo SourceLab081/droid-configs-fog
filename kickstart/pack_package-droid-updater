@@ -1,0 +1,67 @@
+pushd $IMG_OUT_DIR
+
+DEVICE=pipa
+
+VERSION_FILE=./os-release
+source $VERSION_FILE
+
+# Locate rootfs tar archive.
+for filename in *.tar; do
+    GEN_IMG_BASE=$(basename $filename .tar)
+done
+
+DST_IMG_BASE=$ID-$DEVICE-$SAILFISH_FLAVOUR-$VERSION_ID@EXTRA_NAME@
+
+if [ ! -e "$GEN_IMG_BASE.tar" ]; then
+    echo "No rootfs archive found, exiting ..."
+    exit 1
+fi
+
+IMG_SIZE=$(du -h $GEN_IMG_BASE.tar | cut -f1)
+
+# Output filenames
+DST_IMG_BASE=$ID-$DEVICE-$SAILFISH_FLAVOUR-$VERSION_ID@EXTRA_NAME@
+
+fallocate -l 2G userdata.img
+
+/sbin/mkfs.ext4 userdata.img
+
+mkdir tmp
+
+mount userdata.img tmp
+
+mkdir -p tmp/.stowaways/sailfishos
+
+tar --numeric-owner -xf $GEN_IMG_BASE.tar -C tmp/.stowaways/sailfishos
+
+rm $GEN_IMG_BASE.tar
+
+umount userdata.img
+
+rmdir tmp
+
+# Copy boot image, updater scripts and updater binary into updater .zip tree.
+mkdir -p updater/META-INF/com/google/android
+
+mv update-binary updater/META-INF/com/google/android/update-binary
+mv hybris-updater-script updater/META-INF/com/google/android/updater-script
+mv hybris-boot.img updater/hybris-boot.img
+mv dtbo.img updater/dtbo.img
+mv vendor_boot.img updater/vendor_boot.img
+mv userdata.img updater/userdata.img
+
+# Update updater-script with image details.
+sed -i -e "s %VERSION% $VERSION_ID g" -e "s %IMAGE_FILE% $DST_IMG g" -e "s %IMAGE_SIZE% $IMG_SIZE g" updater/META-INF/com/google/android/updater-script
+
+# pack updater .zip
+pushd updater
+zip -r ../$DST_IMG_BASE.zip META-INF/com/google/android/update-binary META-INF/com/google/android/updater-script hybris-boot.img dtbo.img vendor_boot.img userdata.img $DST_IMG_BASE.ks $DST_IMG
+popd # updater
+
+# Move the rootfs back out of the updater directory
+mv updater/userdata.img userdata.img
+
+# Clean up updater .zip working directory.
+rm -rf updater
+
+popd # $IMG_OUT_DIR

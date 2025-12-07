@@ -31,8 +31,8 @@ Requires: bluebinder
 # Telephony
 Requires: ofono-binder-plugin
 Requires: dummy_netd
-Requires: ofono-binder-plugin-ext-qti
-Requires: fake-qcrilmsgtunnel
+# Requires: ofono-binder-plugin-ext-qti
+# Requires: fake-qcrilmsgtunnel
 
 # Sensors
 Requires: hybris-libsensorfw-qt5

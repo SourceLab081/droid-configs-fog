@@ -31,8 +31,8 @@ Requires: bluebinder
 # Telephony
 Requires: ofono-binder-plugin
 Requires: dummy_netd
-# Requires: ofono-binder-plugin-ext-qti
-# Requires: fake-qcrilmsgtunnel
+Requires: modem_auto_config
+Requires: ofono-vendor-qti-radio-plugin
 
 # Sensors
 Requires: hybris-libsensorfw-qt5
@@ -55,7 +55,7 @@ Requires: audiosystem-passthrough-dummy-af
 # droid-bthelper monitors bluetooth headsets and notifies android
 # audio service. after such notification, phone calls are routed through
 # bluetooth headset
-Requires: droid-bthelper
+# Requires: droid-bthelper
 
 # for audio recording to work:
 Requires: qt5-qtmultimedia-plugin-mediaservice-gstmediacapture

@@ -114,4 +114,10 @@ Requires: sailfish-connman-plugin-suspend
 # it is required for high boot success rate
 Requires: yamuisplash
 
+# for wait keymaster
+Requires: libgbinder-tools
+
+# better support shell and happy
+Requires: gnu-bash
+
 %files -n patterns-sailfish-device-adaptation-fog

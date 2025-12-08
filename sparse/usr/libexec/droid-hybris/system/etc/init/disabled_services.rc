@@ -40,4 +40,10 @@ service mediametrics /system/bin/mediametrics_HYBRIS_DISABLED
 
 service bpfloader /system/bin/netbpfload_HYBRIS_DISABLED
 
-service xiaomi-keyboard /vendor/bin/xiaomi-keyboard_HYBRIS_DISABLED
+service vendor.audio-hal android.hardware.audio.service_DISABLED
+    disabled
+    oneshot
+    override
+
+service vendor.wifi_hal_legacy android.hardware.wifi-service_HYBRIS_DISABLED
+    override

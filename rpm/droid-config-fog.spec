@@ -8,6 +8,7 @@
 
 %define pixel_ratio 1.38
 
+%define have_modem 1
 %define android_version_major 14
 
 # Device-specific ofono configuration
@@ -15,8 +16,6 @@ Provides: ofono-configs
 Obsoletes: ofono-configs-mer
 Obsoletes: ofono-configs-binder
 
-# No device reset
-Provides: jolla-settings-system-reset
 
 # Device-specific usb-moded configuration
 Provides: usb-moded-configs

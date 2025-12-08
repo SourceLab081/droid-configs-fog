@@ -6,10 +6,16 @@ Summary: Jolla Configuration fog
 Requires: patterns-sailfish-device-configuration-common-fog
 Requires: patterns-sailfish-device-adaptation-fog
 
+# For devices with cellular modem. Those without one, please comment out:
+Requires: patterns-sailfish-cellular-apps
+
 # Early stages of porting benefit from these:
 Requires: patterns-sailfish-device-tools
 
 Requires: sailfish-content-graphics-z%{icon_res}
+
+# For multi-SIM devices
+Requires: jolla-settings-networking-multisim
 
 # Flashlight
 Requires: jolla-settings-system-flashlight
@@ -34,14 +40,25 @@ Requires: geoclue-provider-mlsdb
 # to improve camera startup times and the like
 Requires: mapplauncherd-booster-silica-qt5-media
 
-# Audio rotation fix
-# Requires: fog-audio-rotation
+# Add pre-installed some jolla/sailfish apps
+Requires: sailfish-office
+Requires: jolla-calculator
+Requires: jolla-email
+Requires: jolla-notes
+Requires: jolla-clock
+Requires: jolla-mediaplayer
+Requires: jolla-calendar
+Requires: sailfish-weather
+Requires: sailfish-utilities
+Requires: sailfish-audiorecorder
+Requires: jolla-settings-networking-plugin-vpn-openfortivpn
 
 # bloat
 Recommends: harbour-storeman
 Recommends: sailfishos-chum-gui
 Recommends: punky
 Recommends: verdandiupdater-sfos
+Recommends: harbour-souniaoime
 
 %description -n patterns-sailfish-device-configuration-fog
 Pattern with packages for fog configurations

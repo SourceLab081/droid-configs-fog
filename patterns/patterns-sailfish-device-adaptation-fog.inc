@@ -34,6 +34,9 @@ Requires: dummy_netd
 # Requires: modem_auto_config
 # Requires: ofono-vendor-qti-radio-plugin
 
+# VoLTE
+Requires: ofono-binder-plugin-ext-qti
+
 # Sensors
 Requires: hybris-libsensorfw-qt5
 
@@ -113,9 +116,6 @@ Requires: sailfish-connman-plugin-suspend
 # Splash screen - it has to be stopped for composer to work, but somehow
 # it is required for high boot success rate
 Requires: yamuisplash
-
-# for wait keymaster
-Requires: libgbinder-tools
 
 # better support shell and happy
 Requires: gnu-bash

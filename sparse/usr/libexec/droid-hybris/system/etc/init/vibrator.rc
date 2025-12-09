@@ -1,0 +1,9 @@
+on late-init
+    chmod 0664 /sys/class/leds/vibrator/activate
+    chmod 0664 /sys/class/leds/vibrator/brightness
+    chmod 0664 /sys/class/leds/vibrator/duration
+    chmod 0664 /sys/class/leds/vibrator/state
+    chmod 0664 /sys/class/leds/vibrator/trigger
+
+service vendor.qti.vibrator /vendor/bin/hw/vendor.qti.hardware.vibrator.service.FP4_HYBRIS_DISABLED
+    override

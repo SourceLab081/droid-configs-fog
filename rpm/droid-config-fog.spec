@@ -7,8 +7,6 @@
 %define vendor_pretty Xiaomi
 %define device_pretty Redmi 10C
 
-%define community_adaptation 1
-
 %define pixel_ratio 1.6
 
 %define have_modem 1

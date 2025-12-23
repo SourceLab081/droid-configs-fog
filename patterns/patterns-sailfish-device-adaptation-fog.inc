@@ -28,6 +28,9 @@ Requires: bluebinder
 Requires: ofono-binder-plugin
 Requires: dummy_netd
 
+# VoLTE
+Requires: ofono-binder-plugin-ext-qti
+
 # Sensors
 Requires: hybris-libsensorfw-qt5
 
@@ -59,7 +62,7 @@ Requires: gstreamer1.0-droid
 Requires: gmp-droid
 
 # This is needed for notification LEDs
-Requires: mce-plugin-libhybris
+# Requires: mce-plugin-libhybris
 
 # USB mode controller
 Requires: usb-moded
@@ -68,9 +71,9 @@ Requires: usb-moded
 Requires: rfkill
 
 #Add FP support
-#Requires: sailfish-fpd-community
-#Requires: sailfish-devicelock-fpd
-#Requires: droid-fake-crypt
+Requires: sailfish-fpd-community
+Requires: sailfish-devicelock-fpd
+Requires: droid-fake-crypt
 
 # Enable home encryption
 #Requires: sailfish-device-encryption
@@ -79,8 +82,8 @@ Requires: rfkill
 Requires: geoclue-provider-hybris
 
 # For FM radio on some QCOM devices
-#Requires: qt5-qtmultimedia-plugin-mediaservice-irisradio
-#Requires: jolla-mediaplayer-radio
+Requires: qt5-qtmultimedia-plugin-mediaservice-irisradio
+Requires: jolla-mediaplayer-radio
 
 # NFC support
 Requires: nfcd-binder-plugin
@@ -91,6 +94,13 @@ Requires: jolla-settings-system-flashlight
 
 # For suspend to work with enabled Wi-Fi on newer Qualcomm devices
 Requires: sailfish-connman-plugin-suspend
+
+# Splash screen - it has to be stopped for composer to work, but somehow
+# it is required for high boot success rate
+Requires: yamuisplash
+
+# better support shell and happy
+Requires: gnu-bash
 
 %description -n patterns-sailfish-device-adaptation-fog
 Pattern with packages for fog HW Adaptation

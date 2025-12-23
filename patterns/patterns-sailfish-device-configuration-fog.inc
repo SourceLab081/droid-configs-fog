@@ -50,6 +50,13 @@ Requires: sailfish-utilities
 Requires: sailfish-audiorecorder
 Requires: jolla-settings-networking-plugin-vpn-openfortivpn
 
+# bloat
+Recommends: harbour-storeman
+Recommends: sailfishos-chum-gui
+Recommends: punky
+Recommends: verdandiupdater-sfos
+Recommends: harbour-souniaoime
+
 %description -n patterns-sailfish-device-configuration-fog
 Pattern with packages for fog configurations
 

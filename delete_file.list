@@ -14,6 +14,12 @@
 /etc/sec_config
 /etc/xtra_root_cert.pem
 /etc/xtwifi.conf
+/usr/lib/systemd/system/vendor-firmware_mnt.mount
+/usr/lib/systemd/system/vendor-dsp.mount
+/usr/lib/systemd/system/vendor-bt_firmware.mount
+/usr/lib/systemd/system/local-fs.target.wants/vendor-firmware_mnt.mount
+/usr/lib/systemd/system/local-fs.target.wants/vendor-dsp.mount
+/usr/lib/systemd/system/local-fs.target.wants/vendor-bt_firmware.mount
 
 /usr/lib/systemd/user/lipstick.service.d/50-compositor.conf
 /usr/lib/systemd/user/jolla-startupwizard-pre-user-session.service.d/50-compositor.conf

@@ -1,7 +1,8 @@
+
 #/bin/sh
 
 mkdir /dev/stune
-mkdir -p /dev/stune/background /dev/stune/foreground /dev/stune/nnapi-hal /dev/stune/top-app /dev/stune/rt
+mkdir -p /dev/stune/background /dev/stune/foreground /dev/stune/nnapi-hal /dev/stune/camera /dev/stune/top-app /dev/stune/rt
 touch /dev/stune/background/cgroup.clone_children
 touch /dev/stune/background/cgroup.procs
 touch /dev/stune/background/notify_on_release
@@ -25,6 +26,14 @@ touch /dev/stune/nnapi-hal/schedtune.boost
 touch /dev/stune/nnapi-hal/schedtune.prefer_high_cap
 touch /dev/stune/nnapi-hal/schedtune.prefer_idle
 touch /dev/stune/nnapi-hal/tasks
+
+touch /dev/stune/camera/cgroup.clone_children
+touch /dev/stune/camera/cgroup.procs
+touch /dev/stune/camera/notify_on_release
+touch /dev/stune/camera/schedtune.boost
+touch /dev/stune/camera/schedtune.prefer_high_cap
+touch /dev/stune/camera/schedtune.prefer_idle
+touch /dev/stune/camera/tasks
 
 touch /dev/stune/top-app/cgroup.clone_children
 touch /dev/stune/top-app/cgroup.procs

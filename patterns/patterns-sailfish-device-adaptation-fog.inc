@@ -5,8 +5,8 @@
 Summary: Jolla HW Adaptation fog
 Requires: droid-hal-fog
 Requires: droid-hal-fog-img-boot
-Requires: droid-hal-fog-kernel
 Requires: droid-hal-fog-kernel-dtbo
+Requires: droid-hal-fog-vendor_boot
 Requires: droid-hal-fog-kernel-modules
 Requires: droid-config-fog-sailfish
 Requires: droid-config-fog-pulseaudio-settings
@@ -15,41 +15,27 @@ Requires: droid-config-fog-preinit-plugin
 Requires: droid-config-fog-flashing
 Requires: droid-config-fog-bluez5
 Requires: droid-hal-version-fog
-Requires: droid-hal-fog-detritus
 
 # Hybris packages
 Requires: libhybris-libEGL
 Requires: libhybris-libGLESv2
 Requires: libhybris-libwayland-egl
-Requires: libhybris-libOpenCL
-Requires: libhybris-libvibrator
 
 # Bluetooth
 Requires: bluebinder
 
-# Fingerprint
-# Requires: sailfish-devicelock-fpd
-# Requires: sailfish-fpd-community
-# Requires: droid-biometry-fp
-# Obsoletes: jolla-devicelock-daemon-encpartition
-
 # Telephony
 Requires: ofono-binder-plugin
 Requires: dummy_netd
-# Requires: modem_auto_config
-# Requires: ofono-vendor-qti-radio-plugin
 
-# For torch
-Requires: jolla-settings-system-flashlight
-
-# For suspend to work with enabled Wi-Fi on newer Qualcomm devices
-Requires: sailfish-connman-plugin-suspend
+# VoLTE
+Requires: ofono-binder-plugin-ext-qti
 
 # Sensors
-Requires: hybris-libsensorfw-qt5-binder
+Requires: hybris-libsensorfw-qt5
 
 # Vibra
-Requires: ngfd
+Requires: ngfd-plugin-native-vibrator
 Requires: libngf-qt5-qtfeedback
 
 # Needed for /dev/touchscreen symlink
@@ -71,13 +57,9 @@ Requires: qt5-qtwayland-wayland_egl
 Requires: qt5-qpa-hwcomposer-plugin
 Requires: qtscenegraph-adaptation
 
-# Add GStreamer v1.0 as standard
-Requires: gstreamer1.0
-Requires: nemo-gstreamer1.0-interfaces
 # For hybris devices with droidmedia, see HADK pdf for more information
 Requires: gstreamer1.0-droid
 Requires: gmp-droid
-Provides: gecko-camera-droid-plugin
 
 # This is needed for notification LEDs
 # Requires: mce-plugin-libhybris
@@ -88,26 +70,37 @@ Requires: usb-moded
 # hammerhead, grouper, and maguro use this in scripts, so include for all
 Requires: rfkill
 
+#Add FP support
+Requires: sailfish-fpd-community
+Requires: sailfish-devicelock-fpd
+Requires: droid-fake-crypt
+
 # Enable home encryption
-# Requires: droid-hwcrypt
-# Requires: sailfish-device-encryption-community
-# Requires: sailfish-device-encryption-community-droid
+#Requires: sailfish-device-encryption
 
 # For GPS
 Requires: geoclue-provider-hybris
 
+# For FM radio on some QCOM devices
+Requires: qt5-qtmultimedia-plugin-mediaservice-irisradio
+Requires: jolla-mediaplayer-radio
+
 # NFC support
 Requires: nfcd-binder-plugin
+Requires: jolla-settings-system-nfc
 
-# For mount partitions
-Requires: parse-android-dynparts
+# For torch
+Requires: jolla-settings-system-flashlight
 
-# Usb-Tethering
-Requires: usb-moded-defaults-android
-Requires: usb-moded-connection-sharing-android-connman-config
+# For suspend to work with enabled Wi-Fi on newer Qualcomm devices
+Requires: sailfish-connman-plugin-suspend
 
-# wait_hwcomposer script
-# Requires: libgbinder-tools
+# Splash screen - it has to be stopped for composer to work, but somehow
+# it is required for high boot success rate
+Requires: yamuisplash
+
+# better support shell and happy
+Requires: gnu-bash
 
 %description -n patterns-sailfish-device-adaptation-fog
 Pattern with packages for fog HW Adaptation

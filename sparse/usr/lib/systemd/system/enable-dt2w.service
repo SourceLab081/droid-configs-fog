@@ -1,0 +1,13 @@
+[Unit]
+Description=Enable dt2w
+DefaultDependencies=no
+After=init-done.service
+
+[Service]
+Type=oneshot
+ExecStartPre=/bin/sleep 10
+ExecStart=/bin/sh -c "echo 1 > /proc/tp_gesture"
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

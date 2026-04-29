@@ -28,8 +28,8 @@ Requires: bluebinder
 Requires: ofono-binder-plugin
 Requires: dummy_netd
 
-# VoLTE
-Requires: ofono-binder-plugin-ext-qti
+# VoLTE not for 4.5.0.25 ver
+# Requires: ofono-binder-plugin-ext-qti
 
 # Sensors
 Requires: hybris-libsensorfw-qt5

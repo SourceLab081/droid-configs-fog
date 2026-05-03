@@ -1,18 +1,19 @@
 # Feel free to disable non-critical HA parts during devel by commenting lines out
 # Generated in hadk by executing: rpm/dhd/helpers/add_new_device.sh
 
-%package -n patterns-sailfish-device-adaptation-vayu
-Summary: Jolla HW Adaptation vayu
-Requires: droid-hal-vayu
-Requires: droid-hal-vayu-img-boot
-Requires: droid-hal-vayu-kernel-modules
-Requires: droid-config-vayu-sailfish
-Requires: droid-config-vayu-pulseaudio-settings
-Requires: droid-config-vayu-policy-settings
-Requires: droid-config-vayu-preinit-plugin
-Requires: droid-config-vayu-flashing
-Requires: droid-config-vayu-bluez5
-Requires: droid-hal-version-vayu
+%package -n patterns-sailfish-device-adaptation-fog
+Summary: Jolla HW Adaptation fog
+Requires: droid-hal-fog
+Requires: droid-hal-fog-img-boot
+Requires: droid-hal-fog-kernel-dtbo
+Requires: droid-hal-fog-kernel-modules
+Requires: droid-config-fog-sailfish
+Requires: droid-config-fog-pulseaudio-settings
+Requires: droid-config-fog-policy-settings
+Requires: droid-config-fog-preinit-plugin
+Requires: droid-config-fog-flashing
+Requires: droid-config-fog-bluez5
+Requires: droid-hal-version-fog
 
 # Hybris packages
 Requires: libhybris-libEGL
@@ -25,6 +26,9 @@ Requires: bluebinder
 # Telephony
 Requires: ofono-binder-plugin
 Requires: dummy_netd
+
+# VoLTE not for 4.5.0.25 ver
+# Requires: ofono-binder-plugin-ext-qti
 
 # Sensors
 Requires: hybris-libsensorfw-qt5
@@ -59,7 +63,7 @@ Requires: gmp-droid
 Provides: gecko-camera-droid-plugin = 0.1.4
 
 # This is needed for notification LEDs
-Requires: mce-plugin-libhybris
+#Requires: mce-plugin-libhybris
 
 # USB mode controller
 Requires: usb-moded
@@ -92,7 +96,14 @@ Requires: jolla-settings-system-flashlight
 # For suspend to work with enabled Wi-Fi on newer Qualcomm devices
 Requires: sailfish-connman-plugin-suspend
 
-%description -n patterns-sailfish-device-adaptation-vayu
-Pattern with packages for vayu HW Adaptation
+# Splash screen - it has to be stopped for composer to work, but somehow
+# it is required for high boot success rate
+Requires: yamuisplash
 
-%files -n patterns-sailfish-device-adaptation-vayu
+# better support shell and happy
+Requires: gnu-bash
+
+%description -n patterns-sailfish-device-adaptation-fog
+Pattern with packages for fog HW Adaptation
+
+%files -n patterns-sailfish-device-adaptation-fog

@@ -7,7 +7,6 @@ What=/system_root/system
 Where=/system
 Type=none
 Options=bind
-# Options had SELinux context option:  
 
 # Default is 90 which makes mount period too long in case of
 # errors so drop it down a notch.
@@ -15,3 +14,6 @@ TimeoutSec=10
 
 [Install]
 WantedBy=local-fs.target
+
+# From ./out/target/product/FP4/vendor/etc/fstab.default :
+# system                					/system                ext4    ro,barrier=1                                         wait,slotselect,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey

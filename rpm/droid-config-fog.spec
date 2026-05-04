@@ -15,7 +15,7 @@ Conflicts: appsupport-system-privileged
 
 # Device-specific usb-moded configuration
 Provides: usb-moded-configs
-Obsoletes: usb-moded-defaults
+# Obsoletes: usb-moded-defaults
 
 # Device-specific ofono configuration
 Provides: ofono-configs

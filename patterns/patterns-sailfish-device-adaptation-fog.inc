@@ -111,7 +111,7 @@ Requires: usb-moded-connection-sharing-android-connman-config
 
 # Splash screen - it has to be stopped for composer to work, but somehow
 # it is required for high boot success rate
-Requires: yamuisplash
+# Requires: yamuisplash
 
 # better support shell and happy
 Requires: gnu-bash

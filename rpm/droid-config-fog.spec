@@ -6,21 +6,22 @@
 %define device_pretty Redmi 10C
 %define dcd_path ./
 # Adjust this for your device
-%define pixel_ratio 1.5
+%define pixel_ratio 1.4  
 # We assume most devices will
 %define have_modem 1
 %define android_version_major 11
 
-Conflicts: appsupport-system-privileged
-
 # Device-specific usb-moded configuration
 Provides: usb-moded-configs
-# Obsoletes: usb-moded-defaults
+Obsoletes: usb-moded-defaults
 
 # Device-specific ofono configuration
 Provides: ofono-configs
 Obsoletes: ofono-configs-mer
 Obsoletes: ofono-configs-binder
+
+# No device reset
+Provides: jolla-settings-system-reset
 
 Obsoletes: qt5-qpa-surfaceflinger-plugin
 

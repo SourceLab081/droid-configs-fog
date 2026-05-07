@@ -56,11 +56,19 @@ Requires: qt5-qtwayland-wayland_egl
 Requires: qt5-qpa-hwcomposer-plugin
 Requires: qtscenegraph-adaptation
 
+## For hybris devices with droidmedia, see HADK pdf for more information
+#Requires: gstreamer1.0-droid
+#Requires: gmp-droid
+## Doesn't work and prevents gmp-droid initialization
+#Provides: gecko-camera-droid-plugin = 0.1.4
+
+# Add GStreamer v1.0 as standard
+Requires: gstreamer1.0
+Requires: nemo-gstreamer1.0-interfaces
 # For hybris devices with droidmedia, see HADK pdf for more information
 Requires: gstreamer1.0-droid
 Requires: gmp-droid
-# Doesn't work and prevents gmp-droid initialization
-Provides: gecko-camera-droid-plugin = 0.1.4
+Provides: gecko-camera-droid-plugin
 
 # This is needed for notification LEDs
 #Requires: mce-plugin-libhybris

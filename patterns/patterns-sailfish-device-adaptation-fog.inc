@@ -80,6 +80,9 @@ Requires: usb-moded
 # hammerhead, grouper, and maguro use this in scripts, so include for all
 Requires: rfkill
 
+# enable device lock and allow to select untrusted software
+Requires: jolla-devicelock-daemon-encsfa
+
 #Add FP support
 Requires: sailfish-fpd-community
 Requires: sailfish-devicelock-fpd
@@ -92,8 +95,8 @@ Requires: droid-fake-crypt
 Requires: geoclue-provider-hybris
 
 # For FM radio on some QCOM devices
-#Requires: qt5-qtmultimedia-plugin-mediaservice-irisradio
-#Requires: jolla-mediaplayer-radio
+Requires: qt5-qtmultimedia-plugin-mediaservice-irisradio
+Requires: jolla-mediaplayer-radio
 
 # NFC support
 Requires: nfcd-binder-plugin
@@ -111,7 +114,10 @@ Requires: usb-moded-connection-sharing-android-connman-config
 
 # Splash screen - it has to be stopped for composer to work, but somehow
 # it is required for high boot success rate
-# Requires: yamuisplash
+Requires: yamuisplash
+
+# for wait keymaster
+Requires: libgbinder-tools
 
 # better support shell and happy
 Requires: gnu-bash

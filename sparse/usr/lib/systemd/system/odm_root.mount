@@ -4,7 +4,7 @@ Before=local-fs.target systemd-modules-load.service
 
 [Mount]
 What=/system_root/vendor/odm
-Where=/odm
+Where=/odm_root
 #Type=erofs
 Options=bind,ro
 # Options had SELinux context option:  

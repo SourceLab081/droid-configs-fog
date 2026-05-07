@@ -1,0 +1,10 @@
+# Model for libdeviceinfo
+ro.product.vendor.device=fog
+# Camera model for taken pictures
+ro.product.model=Redmi 10C
+# MTP device name
+ro.product.vendor.model=Redmi 10C
+# Manufacturer in host dmesg
+ro.product.vendor.manufacturer=Xiaomi
+# urfkill expects this
+wifi.interface=wlan0

@@ -10,4 +10,12 @@ mount --bind /odm_root/etc /odm/etc
 # bind custom patches
 #mount --bind $lipstick_patch /usr/share/lipstick-jolla-home-qt5/statusarea/StatusArea.qml
 
+# bt
+mount --bind /usr/libexec/droid-hybris/system/bluebinder_wait.sh /usr/bin/droid/bluebinder_wait.sh
+
+# waydroid binderfs
+cd /dev/
+ln -s binderfs/*puddle* .
+chmod 666 binderfs/*puddle
+
 echo -1000 > /proc/self/oom_score_adj
